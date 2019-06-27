@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(express.static('dist'));
 app.use(express.static('public'));
 
-
+const key= process.env.OWM_API_KEY;
 app.get('/weather/:searchTarget', (req, res) => {
     console.log(req.params.searchTarget)
     axios({
